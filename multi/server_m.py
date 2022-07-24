@@ -59,10 +59,10 @@ def accepting_connections():
 
 
 
-def start_turtle():
+def start_terminal():
 
     while True:
-        cmd = input('turtle> ')
+        cmd = input('terminal> ')
         if cmd == 'list':
             list_connections()
         elif 'select' in cmd:
@@ -86,7 +86,7 @@ def list_connections():
 
         results = str(i) + "   " + str(all_address[i][0]) + "   " + str(all_address[i][1]) + "\n"
 
-    print("----Clients----" + "\n" + results)
+    print("Clients" + "\n" + results)
 
 
 def get_target(cmd):
@@ -130,7 +130,7 @@ def work():
             bind_socket()
             accepting_connections()
         if x == 2:
-            start_turtle()
+            start_terminal()
 
         queue.task_done()
 

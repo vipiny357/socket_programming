@@ -42,8 +42,8 @@ def send_commands(conn):
             sys.exit()
         if len(str.encode(cmd))>0:
             conn.send(str.encode(cmd))
-            client_reesponse =str(conn.recv(1024),'utf-8')
-            print(client_reesponse,end="")
+            client_response =str(conn.recv(1024),'utf-8')
+            print(client_response,end="")
 
 
 def main():
